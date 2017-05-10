@@ -1,5 +1,3 @@
-
-
 Closure closureObject = { String incomingText -> 
 	//take the data passed in and do something with it
 	BowlerKernel.speak(incomingText);
