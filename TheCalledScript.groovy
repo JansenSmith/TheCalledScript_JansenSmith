@@ -1,9 +1,9 @@
 double computeGearPitch(double diameterAtCrown,double numberOfTeeth){
 	return ((diameterAtCrown/2)*((360.0)/numberOfTeeth)*Math.PI/180)
 }
+
 // call a script from another library
-List<Object> bevelGears = (List<Object>)ScriptingEngine
-					 .gitScriptRun(
+def bevelGears = ScriptingEngine.gitScriptRun(
             "https://github.com/madhephaestus/GearGenerator.git", // git location of the library
             "bevelGear.groovy" , // file to load
             // Parameters passed to the funcetion
