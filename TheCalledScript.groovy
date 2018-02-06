@@ -9,7 +9,7 @@ def bevelGears = ScriptingEngine.gitScriptRun(
             [	  60,// Number of teeth gear a
 	            24,// Number of teeth gear b
 	            3.5,// thickness of gear A
-	            computeGearPitch(26.15,24),// gear pitch in arch length mm
+	            computeGearPitch(26.15,24),// gear pitch in arc length mm
 	            90// shaft angle, can be from 0 to 100 degrees
             ]
             )
