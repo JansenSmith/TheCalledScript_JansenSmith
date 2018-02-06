@@ -1,3 +1,6 @@
+double computeGearPitch(double diameterAtCrown,double numberOfTeeth){
+	return ((diameterAtCrown/2)*((360.0)/numberOfTeeth)*Math.PI/180)
+}
 // call a script from another library
 List<Object> bevelGears = (List<Object>)ScriptingEngine
 					 .gitScriptRun(
@@ -7,7 +10,7 @@ List<Object> bevelGears = (List<Object>)ScriptingEngine
             [	  40,// Number of teeth gear a
 	            24,// Number of teeth gear b
 	            3.5,// thickness of gear A
-	            3.423// gear pitch in arch length mm
+	            computeGearPitch(26.15,24)// gear pitch in arch length mm
             ]
             )
 //Print parameters returned by the script
