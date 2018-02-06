@@ -7,7 +7,7 @@ List<Object> bevelGears = (List<Object>)ScriptingEngine
             [	  40,// Number of teeth gear a
 	            24,// Number of teeth gear b
 	            3.5,// thickness of gear A
-	            ((26.15/2)*((360.0)/24)*Math.PI/180*4)// gear pitch in arch length mm
+	            3.423// gear pitch in arch length mm
             ]
             )
 //Print parameters returned by the script
