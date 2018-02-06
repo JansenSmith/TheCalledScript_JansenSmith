@@ -1,7 +1,6 @@
 double computeGearPitch(double diameterAtCrown,double numberOfTeeth){
 	return ((diameterAtCrown/2)*((360.0)/numberOfTeeth)*Math.PI/180)
 }
-
 // call a script from another library
 def bevelGears = ScriptingEngine.gitScriptRun(
             "https://github.com/madhephaestus/GearGenerator.git", // git location of the library
@@ -10,7 +9,8 @@ def bevelGears = ScriptingEngine.gitScriptRun(
             [	  60,// Number of teeth gear a
 	            24,// Number of teeth gear b
 	            3.5,// thickness of gear A
-	            computeGearPitch(26.15,24)// gear pitch in arch length mm
+	            computeGearPitch(26.15,24),// gear pitch in arch length mm
+	            90// shaft angle, can be from 0 to 100 degrees
             ]
             )
 //Print parameters returned by the script
