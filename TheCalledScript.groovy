@@ -1,13 +1,18 @@
-Closure remoteFunction = (Closure )ScriptingEngine
+List<Object> bevelGears = (List<Object>)ScriptingEngine
 					 .gitScriptRun(
-            "https://gist.github.com/01de984b2912f73643f7.git", // git location of the library
-            "AMainScriptsAsFunctions.groovy" , // file to load
-            null// no parameters (see next tutorial)
+            "https://github.com/madhephaestus/GearGenerator.git", // git location of the library
+            "bevelGear.groovy" , // file to load
+            [	  40,// Number of teeth gear a
+	            24,// Number of teeth gear b
+	            3.5,// thickness of gear A
+	            ((26.15/2)*((360.0)/24)*Math.PI/180*4)// gear pitch in arch length mm
+            ]// Parameters passed to the funcetion
             );
-//Call code in the main script first
-BowlerKernel.speak("Now your are thinking ");
-//Call the function once and store the returned string
-String returnValue = remoteFunction("with portals");
-//Use the data returned from the function
-BowlerKernel.speak(returnValue);
+//Print parameters returned by the script
+println "Bevel gear radius A " + bevelGears.get(2)
+println "Bevel gear radius B " + bevelGears.get(3)
+println "Bevel angle " + bevelGears.get(4)
+println "Bevel tooth face length " + bevelGears.get(5)
+// return the CSG parts
 
+return [bevelGears.get(0),bevelGears.get(1)]
