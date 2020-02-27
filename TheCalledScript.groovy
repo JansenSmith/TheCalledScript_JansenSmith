@@ -15,10 +15,12 @@ def bevelGears = ScriptingEngine.gitScriptRun(
             ]
             )
 //Print parameters returned by the script
-println "Bevel gear axle center to center " + bevelGears.get(2)
-println "Bevel gear axle Height " + bevelGears.get(3)
+println "Bevel gear axil center to center " + bevelGears.get(2)
+println "Bevel gear axil Height " + bevelGears.get(3)
 println "Bevel angle " + bevelGears.get(4)
 println "Bevel tooth face length " + bevelGears.get(5)
 println "Gear B computed thickness " + bevelGears.get(6)
+println "Gear Ratio " + bevelGears.get(7)
+println "Mesh Interference calculated: " + bevelGears.get(9)
 // return the CSG parts
 return [bevelGears.get(0),bevelGears.get(1)]
